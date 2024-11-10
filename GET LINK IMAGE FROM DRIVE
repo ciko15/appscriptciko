@@ -1,0 +1,10 @@
+function source(filename) {
+  var files = DriveApp.getFilesByName(filename);
+  if (files.hasNext()) {
+    var file = files.next();
+    var fileUrl = file.getUrl();
+    return fileUrl;
+  } else {
+    return "File not found";
+  }
+}
